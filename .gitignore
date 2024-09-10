@@ -1,0 +1,17 @@
+node_modules/
+package-lock.json
+yarn.lock
+
+.DS_Store
+Thumbs.db
+
+*.log
+
+tmp/
+temp/
+
+dist/
+build/
+
+
+.env

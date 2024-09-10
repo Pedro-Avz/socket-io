@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webhook WebSocket Demo</title>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <h1>Webhook WebSocket Demo</h1>
+  <div id="events"></div>
+
+  <script>
+    const socket = io();
+
+    socket.on('webhook-event', (data) => {
+      const eventDiv = document.getElementById('events');
+      const newEvent = document.createElement('div');
+      newEvent.innerHTML = `Evento recebido: ${JSON.stringify(data)}`;
+      eventDiv.appendChild(newEvent);
+    });
+  </script>
+</body>
+</html>
